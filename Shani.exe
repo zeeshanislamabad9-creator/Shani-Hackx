@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey I am Shani</title>
+    <style>
+        /* Modern, cute font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Soft 3D Pastel Gradient Background */
+            background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 100%);
+            overflow: hidden;
+        }
+
+        /* The 3D Floating Card */
+        .card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 3rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d;
+            animation: float 5s ease-in-out infinite;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateX(2deg) rotateY(-2deg); }
+            50% { transform: translateY(-20px) rotateX(-2deg) rotateY(2deg); }
+        }
+
+        h1 {
+            color: #ff80ab;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+        }
+
+        p {
+            color: #546e7a;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 3D Button Style */
+        .link {
+            text-decoration: none;
+            color: white;
+            background: #81d4fa;
+            padding: 12px 25px;
+            border-radius: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 0px #4fc3f7; /* Bottom shadow for 3D depth */
+        }
+
+        .link:hover {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0px #4fc3f7;
+            background: #b3e5fc;
+            color: #0277bd;
+        }
+
+        .link:nth-child(2) { background: #f48fb1; box-shadow: 0 5px 0px #f06292; }
+        .link:nth-child(2):hover { background: #f8bbd0; color: #ad1457; box-shadow: 0 2px 0px #f06292; }
+
+        .link:nth-child(3) { background: #ce93d8; box-shadow: 0 5px 0px #ba68c8; }
+        .link:nth-child(3):hover { background: #e1bee7; color: #6a1b9a; box-shadow: 0 2px 0px #ba68c8; }
+
+        /* Floating Bubbles for Background Depth */
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            z-index: -1;
+            animation: bubbleMove 10s infinite alternate;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bubble" style="width: 100px; height: 100px; top: 10%; left: 10%;"></div>
+    <div class="bubble" style="width: 150px; height: 150px; bottom: 15%; right: 10%;"></div>
+
+    <div class="card">
+        <h1>hey I am shani.</h1>
+        <p>✨ <strong>Web Developer Message:</strong><br>
+        I don't just write code; I build digital experiences with love and precision. Let's turn your imagination into a pixel-perfect reality!</p>
+        
+        <div class="links-container">
+            <a href="#" class="link">My Portfolio</a>
+            <a href="#" class="link">Project Gallery</a>
+            <a href="#" class="link">Contact Me</a>
+        </div>
+    </div>
+
+</body>
+</html>
